@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeet Techno</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #ff6700;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header nav ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        header nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 30px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        h1, h2 {
+            color: #333333;
+        }
+        footer {
+            background-color: #333333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        footer nav ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        footer nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        footer nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        form {
+            margin-top: 20px;
+            text-align: center;
+        }
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        form button {
+            background-color: #ff6700;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #ff8000;
+        }
+        .product {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        .product .details {
+            flex: 1;
+        }
+        .product .price {
+            margin-left: 20px;
+        }
+        .rating {
+            color: #ffd700;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h1>Welcome to Jeet Techno</h1>
+            <p>Your premier Mi authorized service center in Jamnagar!</p>
+            <a href="#products">Explore Products</a>
+        </section>
+
+        <section id="services">
+            <h2>Our Services</h2>
+            <ul>
+                <li><a href="#tv-services">TV Repair Services</a></li>
+                <li><a href="#mobile-services">Mobile Phone Repair Services</a></li>
+                <li><a href="#laptop-services">Laptop Repair Services</a></li>
+            </ul>
+        </section>
+
+        <section id="products">
+            <h2>Accessories</h2>
+            <div class="product">
+                <div class="details">
+                    <p>Xiaomi Bluetooth Voice Remote</p>
+                    <p class="rating">★★★★★</p>
+                </div>
+                <div class="image">
+                    <img src="placeholder_image.jpg" alt="Product Image">
+                </div>
+                <div class="price">&#8377;599</div>
+            </div>
+            <!-- Add other product divs here -->
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Welcome to Jeet Techno, your premier after-sales service provider for TVs, mobile phones, and laptops in Jamnagar. With a commitment to excellence, we strive to ensure your devices receive the care and attention they deserve.</p>
+            <p>In addition to our repair services, we also specialize in offering a wide range of Mi phone accessories to complement your devices and enhance your mobile experience. Trust us as your one-stop destination for all your Mi product needs.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>For any inquiries, feel free to contact us:</p>
+            <ul>
+                <li>Phone: 8511862134</li>
+                <li>Email: <a href="mailto:jeet.techno1@gmail.com">jeet.techno1@gmail.com</a></li>
+                <li>Address: First Floor, 40-41-41F Modern Market, Pandit Nehru Marg, GG Hospital Road, Amber Cinema, Jamnagar</li>
+            </ul>
+            <h3>Send Us an Inquiry</h3>
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Your Name" required><br>
+                <input type="email" name="email" placeholder="Your Email" required><br>
+                <textarea name="message" rows="4" placeholder="Your Message" required></textarea><br>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+        <p>Jeet Techno &copy; 2024</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all accessory name elements
+            const accessoryNames = document.querySelectorAll('.product');
+
+            // Attach click event listener to each accessory name
+            accessoryNames.forEach(function(product) {
+                product.addEventListener('click', function() {
+                    // Toggle the visibility of product details
+                    product.classList.toggle('show-details');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
